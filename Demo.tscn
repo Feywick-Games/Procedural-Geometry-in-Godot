@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://uv_illustration.material" type="Material" id=2]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06548, 0, 0 )
+material_override = ExtResource( 2 )
+has_normals = true
+
+[node name="MeshInstance2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410118, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4 )
+environment = SubResource( 1 )

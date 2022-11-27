@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://geometry.gd" type="Script" id=1]
+[ext_resource path="res://breaker.material" type="Material" id=2]
+
+[sub_resource type="ArrayMesh" id=1]
+
+[node name="MeshInstance" type="MeshInstance"]
+material_override = ExtResource( 2 )
+mesh = SubResource( 1 )
+script = ExtResource( 1 )
